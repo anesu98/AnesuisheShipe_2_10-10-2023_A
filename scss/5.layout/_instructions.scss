@@ -1,0 +1,13 @@
+.instructions {
+    @include construction-line($block);
+    @include flex-cntr(column);
+    padding-top: 3.25rem;
+    padding-bottom: 4rem;
+
+    &__heading {
+        @include construction-line($element);
+        width: 89.6%;
+    }
+
+    
+}

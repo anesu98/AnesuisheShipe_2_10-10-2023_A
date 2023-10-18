@@ -1,0 +1,36 @@
+.nav-bar {
+    height: 4rem;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 4px 4px rgba( 0, 0, 0, 0.6);
+    @include flex-cntr(row);
+
+    &__logo {
+        height: 1.5rem;
+        width: auto;
+    }
+
+    &__return {
+        @include rmv-link-styles;
+        position: absolute;
+        left: 1.5rem;
+        font-size: 1.1875rem;
+        color: $primary-font-color;
+    }
+}
+
+.current-location {
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: $nav-location-color;
+    @include flex-cntr(row);
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &__location-name {
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,7 @@
+.button {
+    padding: 1.063rem 0 1.063rem 0;
+    @include btn-background;
+    color: $secondary-font-color;
+    border-radius: 32px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+}

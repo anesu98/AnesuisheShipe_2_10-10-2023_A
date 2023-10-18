@@ -1,0 +1,19 @@
+@import './1.utils/normalize';
+@import './1.utils/variables';
+@import './1.utils/mixins';
+@import './1.utils/functions';
+@import './1.utils/placeholders';
+@import './4.components/button';
+@import './5.layout/nav-bar';
+@import './5.layout/anchor';
+@import './5.layout/instructions';
+
+
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}

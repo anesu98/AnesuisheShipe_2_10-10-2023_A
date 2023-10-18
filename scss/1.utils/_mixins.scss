@@ -1,0 +1,21 @@
+@mixin construction-line ($rule) {
+    border-color: $rule;
+    border-style: solid;
+    border-width: 1px;
+}
+
+@mixin flex-cntr($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rmv-link-styles {
+    color: $primary-font-color;
+    text-decoration: none;
+}
+
+@mixin btn-background {
+    background: linear-gradient(to bottom, $button-color-primary, $button-color-secondary);
+}

@@ -1,0 +1,29 @@
+.anchor {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 2.75rem 0 3.75rem 0;
+    background: rgb(246,246,246);
+    @include flex-cntr($column);
+
+    &__heading {
+        margin: 0;
+        font-size: 1.563rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    &__para {
+        margin: 3rem 0 1.75rem 0;
+        font-size: 1rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    .button {
+        margin: 0;
+        text-decoration: none;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+}
