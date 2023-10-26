@@ -9,5 +9,45 @@
         width: 89.6%;
     }
 
-    
+    &__list {
+        list-style: none;
+        padding: 0;
+        width: 89.6%;
+        @include flex-cntr($column);
+        gap: 1.5rem;
+
+        &--item{
+            @include construction-line($block);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            border-radius: 36px;
+            width: 100%;
+        }
+
+        &--item-number {
+            @include construction-line($element);
+            @include flex-cntr(row);
+            z-index: 500;
+            position: absolute;
+            left: -11px;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 30px;
+            text-align: center;
+            background: red;
+            color: white;
+        }
+
+        &--item-icon {
+            @include construction-line($element);
+            margin-left: 2.1rem;
+            margin-right: 1.5rem;
+        }
+
+        &--item-instruction {
+            @include construction-line($element);
+        }
+    }
 }
