@@ -1,0 +1,19 @@
+.restaurants {
+    @include flex-cntr(column);
+    width: 100%;
+    height: 1227px;
+    background-color: rgb(246,246,246);
+
+    &__heading {
+        width: 89.6%;
+    }
+
+    &__cards {
+        width: 89.6%;
+        height: fit-content;
+        
+        a {
+            @include rmv-link-styles;
+        }
+    }
+}

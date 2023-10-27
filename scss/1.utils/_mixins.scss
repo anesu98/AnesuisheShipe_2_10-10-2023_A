@@ -11,6 +11,13 @@
     align-items: center;
 }
 
+@mixin flex-row-split-cntrd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin rmv-link-styles {
     color: $primary-font-color;
     text-decoration: none;
