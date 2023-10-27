@@ -87,6 +87,88 @@ body {
   transition: color 0.3s;
 }
 
+.menu-form {
+  width: 89.6%;
+}
+.menu-form__fieldset-title {
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+.menu-form__fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+.menu-form__meal-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+.menu-form__meal {
+  margin: 12px 0 12px 0;
+  width: 93%;
+  margin-left: 3.5%;
+}
+.menu-form__meal-name {
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.25rem;
+}
+.menu-form__meal-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px 0 0 0;
+  height: 19px;
+  width: 100%;
+}
+.menu-form__meal-description p {
+  margin: 0;
+}
+.menu-form__meal-description p:nth-child(2) {
+  font-weight: 900;
+}
+.menu-form__meal-select {
+  display: none;
+}
+.menu-form__checkbox {
+  display: none;
+}
+.menu-form__checkbox-hidden {
+  display: none;
+}
+.menu-form__order-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 50px 0;
+}
+.menu-form__order-btn .button {
+  width: 188px;
+  border-color: lightgray;
+  border-width: 1px;
+}
+.menu-form__meal-label:hover .menu-form__meal {
+  width: 70%;
+  transition: 0.3s width;
+}
+
 .nav-bar {
   height: 4rem;
   width: 100%;
@@ -266,21 +348,18 @@ body {
 }
 
 .menu {
-  border-color: purple;
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgray;
   border-radius: 40px 40px 0 0;
   width: 100%;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
 }
 .menu__name {
-  border-color: red;
-  border-style: solid;
-  border-width: 1px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -289,15 +368,9 @@ body {
   width: 89.6%;
 }
 .menu__restaurant-name {
-  border-color: red;
-  border-style: solid;
-  border-width: 1px;
   margin: 0;
 }
 .menu__favourite-icon {
-  border-color: red;
-  border-style: solid;
-  border-width: 1px;
   margin: 0;
 }
 .menu__favourite-icon .heart-icon {
