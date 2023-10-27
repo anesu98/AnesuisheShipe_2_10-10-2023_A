@@ -1,0 +1,46 @@
+.footer {
+    background-color: rgb(53, 53, 53);
+    padding-top: 26px;
+    padding-bottom: 37px;
+    @include flex-cntr(column);
+
+    &__logo-container {
+        padding: 0;
+        margin: 0 0 20px 0;
+        width: 89.6%;
+        height: fit-content;
+    }
+    &__logo {
+        width: 105px;
+        height: auto;
+    }
+
+    &__footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 89.6%;
+    }
+
+    &__link {
+        a {
+            @include flex-row-start-cntr;
+            gap: 10px;
+            text-decoration: none;
+            color: $secondary-font-color;
+            height: fit-content;
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__link-icon {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    &__link-para {
+        font-size: 1rem;
+        margin: 0;
+    }
+}

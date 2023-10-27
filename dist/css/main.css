@@ -249,6 +249,54 @@ body {
   border-width: 1px;
 }
 
+.footer {
+  background-color: rgb(53, 53, 53);
+  padding-top: 26px;
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__logo-container {
+  padding: 0;
+  margin: 0 0 20px 0;
+  width: 89.6%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.footer__logo {
+  width: 105px;
+  height: auto;
+}
+.footer__footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 89.6%;
+}
+.footer__link a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.footer__link-icon {
+  font-size: 1rem;
+  margin: 0;
+}
+.footer__link-para {
+  font-size: 1rem;
+  margin: 0;
+}
+
 header {
   width: 100%;
 }

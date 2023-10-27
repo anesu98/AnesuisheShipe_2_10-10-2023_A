@@ -4,6 +4,18 @@
     border-width: 1px;
 }
 
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin flex-row-start-cntr {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 @mixin flex-cntr($direction) {
     display: flex;
     flex-direction: $direction;
