@@ -1,11 +1,10 @@
 .instructions {
-    @include construction-line($block);
     @include flex-cntr(column);
     padding-top: 3.25rem;
     padding-bottom: 4rem;
+    background-color: rgb(255,255,255);
 
     &__heading {
-        @include construction-line($element);
         width: 89.6%;
     }
 
@@ -17,17 +16,17 @@
         gap: 1.5rem;
 
         &--item{
-            @include construction-line($block);
             display: flex;
             flex-direction: row;
             align-items: center;
             position: relative;
             border-radius: 36px;
             width: 100%;
+            background-color: rgb(246,246,246);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
         }
 
         &--item-number {
-            @include construction-line($element);
             @include flex-cntr(row);
             z-index: 500;
             position: absolute;
@@ -36,18 +35,18 @@
             height: 1.5rem;
             border-radius: 30px;
             text-align: center;
-            background: red;
+            background: rgb(159,15,221);
             color: white;
         }
 
         &--item-icon {
-            @include construction-line($element);
+            color: rgb(194,194,194);
             margin-left: 2.1rem;
             margin-right: 1.5rem;
         }
 
         &--item-instruction {
-            @include construction-line($element);
+            font-size: nth($font-size, 4 );
         }
     }
 }
