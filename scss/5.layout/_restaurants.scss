@@ -1,7 +1,8 @@
 .restaurants {
     @include flex-cntr(column);
     width: 100%;
-    height: 1227px;
+    padding-top: 59px;
+    padding-bottom: 63px;
     background-color: rgb(246,246,246);
 
     &__heading {
