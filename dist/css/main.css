@@ -265,6 +265,49 @@ body {
      object-fit: contain;
 }
 
+.menu {
+  border-color: purple;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px 40px 0 0;
+  width: 100%;
+  background-color: white;
+}
+.menu__name {
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  width: 89.6%;
+}
+.menu__restaurant-name {
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0;
+}
+.menu__favourite-icon {
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0;
+}
+.menu__favourite-icon .heart-icon {
+  color: transparent;
+}
+.menu__favourite-icon .heart-icon:hover {
+  color: rgb(255, 76, 217);
+  transition: color 0.3s;
+}
+
 .footer {
   background-color: rgb(53, 53, 53);
   padding-top: 26px;
