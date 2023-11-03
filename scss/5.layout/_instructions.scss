@@ -20,10 +20,14 @@
             flex-direction: row;
             align-items: center;
             position: relative;
-            border-radius: 36px;
+            border-radius: 15px;
             width: 100%;
             background-color: rgb(246,246,246);
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+
+            &:nth-child(3) {
+                background-color: rgb(247,235,255);
+            }
         }
 
         &--item-number {
@@ -49,4 +53,8 @@
             font-size: nth($font-size, 4 );
         }
     }
+}
+
+.fa-store {
+    color: rgb(163,45,222);
 }

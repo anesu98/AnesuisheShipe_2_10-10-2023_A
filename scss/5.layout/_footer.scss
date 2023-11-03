@@ -14,6 +14,7 @@
     &__logo {
         width: 105px;
         height: auto;
+        fill: white;
     }
 
     &__footer-links {
@@ -43,5 +44,9 @@
     &__link-para {
         font-size: 1rem;
         margin: 0;
+    }
+
+    .svg-main {
+        fill: #fff;
     }
 }

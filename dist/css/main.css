@@ -373,10 +373,13 @@ body {
   flex-direction: row;
   align-items: center;
   position: relative;
-  border-radius: 36px;
+  border-radius: 15px;
   width: 100%;
   background-color: rgb(246, 246, 246);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+}
+.instructions__list--item:nth-child(3) {
+  background-color: rgb(247, 235, 255);
 }
 .instructions__list--item-number {
   display: flex;
@@ -400,6 +403,10 @@ body {
 }
 .instructions__list--item-instruction {
   font-size: 1.25rem;
+}
+
+.fa-store {
+  color: rgb(163, 45, 222);
 }
 
 .restaurant-photo {
@@ -473,6 +480,7 @@ body {
 .footer__logo {
   width: 105px;
   height: auto;
+  fill: white;
 }
 .footer__footer-links {
   list-style: none;
@@ -500,6 +508,9 @@ body {
 .footer__link-para {
   font-size: 1rem;
   margin: 0;
+}
+.footer .svg-main {
+  fill: #fff;
 }
 
 .nav-bar {
