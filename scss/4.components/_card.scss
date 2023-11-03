@@ -16,6 +16,8 @@
         height: 175px;
         overflow: hidden;
         @include flex-cntr(column);
+        position: relative;
+        z-index: 1;
 
         img {
             object-fit: contain;
