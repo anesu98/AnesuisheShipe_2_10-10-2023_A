@@ -1,7 +1,17 @@
 .button {
     padding: 1.063rem 0 1.063rem 0;
-    @include btn-background;
+    background-color: rgb(163,45,222);
     color: $secondary-font-color;
     border-radius: 32px;
+    transition: 1s background-color;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+
+    &:hover {
+        @include btn-background;
+        transition: 1s background-color;
+    }
+
+
 }

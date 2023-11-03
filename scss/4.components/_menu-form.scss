@@ -10,6 +10,19 @@
     &__fieldset-title {
         font-weight: nth($font-weight, 1);
         font-size: nth($font-size, 4);
+        margin-bottom: 1.5rem;
+
+        span {
+            &:nth-child(1) {
+                padding-bottom: 0.5%;
+                border-bottom: 3px;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                border-style: solid;
+                border-color: rgb(140, 233, 212);
+            }
+        }
     }
 
     &__fieldset {

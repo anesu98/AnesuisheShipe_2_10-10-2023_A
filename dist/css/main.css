@@ -23,10 +23,17 @@ body {
 }
 .button {
   padding: 1.063rem 0 1.063rem 0;
-  background: linear-gradient(to bottom, rgb(255, 76, 217), rgb(165, 47, 212));
+  background-color: rgb(163, 45, 222);
   color: white;
   border-radius: 32px;
+  transition: 1s background-color;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+}
+.button:hover {
+  background: linear-gradient(to bottom, rgb(255, 76, 217), rgb(165, 47, 212));
+  transition: 1s background-color;
 }
 
 .card {
@@ -115,6 +122,16 @@ body {
 .menu-form__fieldset-title {
   font-weight: 100;
   font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.menu-form__fieldset-title span:nth-child(1) {
+  padding-bottom: 0.5%;
+  border-bottom: 3px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-style: solid;
+  border-color: rgb(140, 233, 212);
 }
 .menu-form__fieldset {
   width: 100%;
