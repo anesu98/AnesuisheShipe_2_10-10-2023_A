@@ -107,6 +107,11 @@ body {
 .menu-form {
   width: 89.6%;
 }
+.menu-form__fieldset-container {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
 .menu-form__fieldset-title {
   font-weight: 100;
   font-size: 1.25rem;
@@ -232,6 +237,15 @@ body {
 }
 .menu-form__meal-label:hover .menu-form__checkbox {
   animation: rotate360 0.5s linear;
+}
+@media screen and (min-width: 768px) {
+  .menu-form__fieldset-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
 }
 
 .new-banner {
