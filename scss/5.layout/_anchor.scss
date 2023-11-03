@@ -6,6 +6,13 @@
     background: rgb(246,246,246);
     @include flex-cntr($column);
 
+    &__text-container {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        @include flex-cntr($column);
+    }
+
     &__heading {
         margin: 0;
         font-size: 1.563rem;

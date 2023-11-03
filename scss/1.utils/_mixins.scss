@@ -39,6 +39,11 @@
     background: linear-gradient(to bottom, $button-color-primary, $button-color-secondary);
 }
 
+@mixin breakpoint($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
 
 @keyframes rotate360 {
     from {

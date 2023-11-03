@@ -53,7 +53,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1;
 }
 .card__image img {
   -o-object-fit: contain;
@@ -303,6 +302,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+.anchor__text-container {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .anchor__heading {
   margin: 0;
   font-size: 1.563rem;
@@ -344,6 +352,36 @@ body {
 .restaurants__cards a {
   color: black;
   text-decoration: none;
+}
+@media screen and (min-width: 1000px) {
+  .restaurants {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+  .restaurants__heading {
+    width: 20%;
+    text-align: center;
+  }
+  .restaurants__cards {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+  }
+  .restaurants__cards a:nth-child(1) {
+    width: 55%;
+  }
+  .restaurants__cards a:nth-child(2) {
+    width: 42%;
+  }
+  .restaurants__cards a:nth-child(3) {
+    width: 44%;
+  }
+  .restaurants__cards a:nth-child(4) {
+    width: 53%;
+  }
 }
 
 .instructions {
@@ -403,6 +441,19 @@ body {
 }
 .instructions__list--item-instruction {
   font-size: 1.25rem;
+}
+@media screen and (min-width: 1000px) {
+  .instructions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .instructions__heading {
+    width: 50%;
+  }
 }
 
 .fa-store {
@@ -464,6 +515,7 @@ body {
   background-color: rgb(53, 53, 53);
   padding-top: 26px;
   padding-bottom: 37px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -509,8 +561,45 @@ body {
   font-size: 1rem;
   margin: 0;
 }
-.footer .svg-main {
-  fill: #fff;
+@media screen and (min-width: 1000px) {
+  .footer__logo-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__footer-links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+  }
+  .footer__link a {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__logo-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__footer-links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+  }
+  .footer__link a {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .nav-bar {
@@ -539,6 +628,10 @@ header {
 
 body {
   background-color: rgb(246, 246, 246);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
