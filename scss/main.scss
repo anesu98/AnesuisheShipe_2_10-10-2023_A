@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import './1.utils/normalize';
 @import './1.utils/variables';
 @import './1.utils/mixins';
@@ -19,6 +20,7 @@
 
 
 
+
 header {
     width: 100%;
 }
@@ -29,6 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'roboto', sans-serif;
 }
 
 main {

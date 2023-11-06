@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ohmyfood - The Full Palette</title>
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b82e5c8e86.js" crossorigin="anonymous"></script>
     </head>
 
@@ -16,9 +19,9 @@
             </nav>
         </header>
 
-        <section class="restaurant-photo">
-            <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.webp" alt="Displays a photo of a meal served at The Full Palette">
-        </section>
+        <div class="restaurant-photo">
+            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.webp" alt="Displays a photo of a meal served at The Full Palette">
+        </div>
 
         <main class="main">
             <section class="menu">
@@ -40,7 +43,7 @@
                                 <span>ENTR</span><span>EES</span>
                             </h2>
     
-                            <label for="escargot" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
                                     <h3 class="menu-form__meal-name">Escargot</h3>
                                     <div class="menu-form__meal-description">
@@ -51,9 +54,9 @@
                                 <div class="menu-form__meal-select">
                                     <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
     
-                            <label for="Duck_Foie_Gras" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
                                     <h3 class="menu-form__meal-name">Duck Foie Gras</h3>
                                     <div class="menu-form__meal-description">
@@ -62,11 +65,11 @@
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Duck_Foie_Gras" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
     
-                            <label for="fried_egg" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
                                     <h3 class="menu-form__meal-name">Fried egg</h3>
                                     <div class="menu-form__meal-description">
@@ -75,101 +78,101 @@
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Fried_egg" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
                         </fieldset>
     
                         
                         <fieldset class="menu-form__fieldset">
                             <h2 class="menu-form__fieldset-title">
-                                <span>ENTR</span><span>EES</span>
+                                <span>MAIN</span> <span>DISH</span>
                             </h2>
     
-                            <label for="escargot" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
-                                    <h3 class="menu-form__meal-name">Escargot</h3>
+                                    <h3 class="menu-form__meal-name">Herb-Encrusted Steak</h3>
                                     <div class="menu-form__meal-description">
-                                        <p>With southern French spices</p>
-                                        <p>25€</p>
+                                        <p>With delicately sliced and seasoned vegetables</p>
+                                        <p>40€</p>
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Herb_Encrusted_Steak" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
     
-                            <label for="Duck_Foie_Gras" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
-                                    <h3 class="menu-form__meal-name">Duck Foie Gras</h3>
+                                    <h3 class="menu-form__meal-name">Ox Tail Shepard's Pie</h3>
                                     <div class="menu-form__meal-description">
-                                        <p>With black truffle shavings</p>
+                                        <p>With black truffle and pureed parsnips</p>
                                         <p>35€</p>
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Ox_Tail_Shepards_Pie" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
     
-                            <label for="fried_egg" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
-                                    <h3 class="menu-form__meal-name">Fried egg</h3>
+                                    <h3 class="menu-form__meal-name">Filet of Sole</h3>
                                     <div class="menu-form__meal-description">
-                                        <p>Seasoned with truffle cream and...</p>
-                                        <p>20€</p>
+                                        <p>With citrus dressing</p>
+                                        <p>44€</p>
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Filet_of_Sole" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
                         </fieldset>
     
                         
                         <fieldset class="menu-form__fieldset">
                             <h2 class="menu-form__fieldset-title">
-                                <span>ENTR</span><span>EES</span>
+                                <span>DESS</span><span>ERTS</span>
                             </h2>
     
-                            <label for="escargot" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
-                                    <h3 class="menu-form__meal-name">Escargot</h3>
+                                    <h3 class="menu-form__meal-name">Paris-Brest</h3>
                                     <div class="menu-form__meal-description">
-                                        <p>With southern French spices</p>
-                                        <p>25€</p>
+                                        <p>Revised</p>
+                                        <p>18€</p>
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Paris_Brest" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
     
-                            <label for="Duck_Foie_Gras" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
-                                    <h3 class="menu-form__meal-name">Duck Foie Gras</h3>
+                                    <h3 class="menu-form__meal-name">Chocolate Macaroons</h3>
                                     <div class="menu-form__meal-description">
-                                        <p>With black truffle shavings</p>
-                                        <p>35€</p>
+                                        <p>With vanilla ice cream</p>
+                                        <p>22€</p>
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Chocolate_Macaroons" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
     
-                            <label for="fried_egg" class="menu-form__meal-label">
+                            <div class="menu-form__meal-label">
                                 <div class="menu-form__meal">
-                                    <h3 class="menu-form__meal-name">Fried egg</h3>
+                                    <h3 class="menu-form__meal-name">Chocolate Mousse</h3>
                                     <div class="menu-form__meal-description">
-                                        <p>Seasoned with truffle cream and...</p>
-                                        <p>20€</p>
+                                        <p>With spices and black truffle</p>
+                                        <p>23€</p>
                                     </div>
                                 </div>
                                 <div class="menu-form__meal-select">
-                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="escargot" class="menu-form__checkbox-hidden"></i>
+                                    <i class="fa-solid fa-circle-check menu-form__checkbox"><input type="checkbox" id="Chocolate_Mousse" class="menu-form__checkbox-hidden"></i>
                                 </div>
-                            </label>
+                            </div>
                         </fieldset>
                     </div>
 

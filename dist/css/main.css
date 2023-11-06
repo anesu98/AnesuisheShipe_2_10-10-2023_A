@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -135,6 +136,7 @@ body {
 }
 .menu-form__fieldset {
   width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   border-style: none;
@@ -162,6 +164,7 @@ body {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
   overflow: hidden;
   width: 100%;
+  max-width: 100%;
   height: 70px;
   margin: 0 0 15px 0;
   padding: 0;
@@ -217,22 +220,43 @@ body {
   margin: 0;
   height: -moz-fit-content;
   height: fit-content;
+  width: 95%;
+  max-width: 95%;
   font-size: 1.25rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-form__meal-description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   margin: 7px 0 0 0;
   height: 19px;
-  width: 100%;
+  width: 95%;
+  max-width: 95%;
+  border-color: purple;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  justify-content: space-between;
 }
 .menu-form__meal-description p {
   margin: 0;
+  text-wrap: nowrap;
+}
+.menu-form__meal-description p:nth-child(1) {
+  height: 19px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 75%;
 }
 .menu-form__meal-description p:nth-child(2) {
   font-weight: 900;
+  border-color: purple;
+  border-style: solid;
+  border-width: 1px;
+  width: 10%;
 }
 .menu-form__meal-select {
   display: flex;
@@ -241,13 +265,18 @@ body {
   align-items: center;
   height: 100%;
   width: 0%;
+  opacity: 0;
+  visibility: hidden;
   background-color: rgb(131, 232, 210);
-  transition: 0.5s width;
+  transition: 0.5s width, 0.5s opacity, 0.2s visibility;
 }
 .menu-form__checkbox {
   color: white;
   font-size: 21px;
   transform-origin: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s opacity, 0.2s visibility;
 }
 .menu-form__checkbox-hidden {
   display: none;
@@ -275,9 +304,12 @@ body {
 .menu-form__meal-label:hover .menu-form__meal-select {
   opacity: 1;
   width: 15%;
+  visibility: visible;
 }
 .menu-form__meal-label:hover .menu-form__checkbox {
   animation: rotate360 0.5s linear;
+  opacity: 1;
+  visibility: visible;
 }
 @media screen and (min-width: 768px) {
   .menu-form__fieldset-container {
@@ -575,6 +607,7 @@ body {
 }
 .menu__restaurant-name {
   margin: 0;
+  font-family: "Shrikhand";
 }
 .menu__favourite-icon {
   margin: 0;
@@ -708,6 +741,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "roboto", sans-serif;
 }
 
 main {
