@@ -127,7 +127,7 @@
     @include breakpoint($tablet-breakpoint) {
         &__fieldset-container {
             display: grid;
-            grid-template-columns: 33% 33% 33%;
+            grid-template-columns: repeat(3, 1fr);
             max-width: 100%;
             gap: 3%;
         }
