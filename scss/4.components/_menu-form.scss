@@ -5,33 +5,17 @@
     width: 100%;
     height: auto;
     margin: 0;
+    @include construction-line($element);
    }
 
-    &__fieldset-title {
-        font-weight: nth($font-weight, 1);
-        font-size: nth($font-size, 4);
-        margin-bottom: 1.5rem;
-
-        span {
-            &:nth-child(1) {
-                padding-bottom: 0.5%;
-                border-bottom: 3px;
-                border-left: 0;
-                border-right: 0;
-                border-top: 0;
-                border-style: solid;
-                border-color: rgb(140, 233, 212);
-            }
-        }
-    }
-
-    &__fieldset {
+   &__fieldset {
         width: 100%;
         max-width: 100%;
         margin: 0;
         padding: 0;
         border-style: none;
         opacity: 0;
+        @include construction-line($element);
 
         &:nth-child(1) {
             animation: 2s fade-in forwards;
@@ -46,24 +30,29 @@
         }
     }
 
-    &__meal-label {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: lightgray;
-        background-color: rgb(255,255,255);
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
-        overflow: hidden;
+    &__fieldset-title {
+        font-weight: nth($font-weight, 1);
+        font-size: nth($font-size, 4);
+        margin-bottom: 1.5rem;
         width: 100%;
-        max-width: 100%;
-        height: 70px;
-        margin: 0 0 15px 0;
-        padding: 0;
-        opacity: 0;
+        @include construction-line($element);
+
+        span {
+            &:nth-child(1) {
+                padding-bottom: 0.5%;
+                border-bottom: 3px;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                border-style: solid;
+                border-color: rgb(140, 233, 212);
+            }
+        }
+    }
+
+    
+
+    &__meal-label {
 
         &:nth-child(1) {
             animation: 1s fade-in forwards;
@@ -116,77 +105,7 @@
         }
     }
 
-    &__meal {
-        margin: 12px 0 12px 0;
-        width: 95%;
-        margin-left: 3.5%;
-        transition: 0.5s width;
-    }
-
-    &__meal-name {
-        margin: 0;
-        height: fit-content;
-        width: 95%;
-        max-width: 95%;
-        font-size: nth($font-size , 4);
-        text-overflow: ellipsis;
-        text-wrap: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    &__meal-description {
-        margin: 7px 0 0 0;
-        height: 19px;
-        width: 95%;
-        max-width: 95%;
-        @include construction-line($block);
-        display: flex;
-        justify-content: space-between;
-
-        p {
-            margin: 0;
-            text-wrap: nowrap;
-        }
-
-        p:nth-child(1) {
-            height: 19px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 75%;
-        }
-
-        p:nth-child(2) {
-            font-weight: nth($font-weight, 9);
-            @include construction-line($block);
-            width: 10%;
-        }
-    }
-
-    &__meal-select {
-        @include flex-cntr(row);
-        height: 100%;
-        width: 0%;
-        opacity: 0;
-        visibility: hidden;
-        background-color: rgb(131,232,210);
-        transition: 0.5s width, 0.5s opacity, 0.2s visibility;
-    }
-
-    &__checkbox {
-        color: white;
-        font-size: 21px;
-        transform-origin: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.5s opacity, 0.2s visibility;
-    }
-
-    &__checkbox-hidden {
-        display: none;
-    }
+    
 
     &__order-btn {
         @include flex-cntr(row);
@@ -205,31 +124,11 @@
         }
     }
 
-    &__meal-label:hover {
-
-        .menu-form__meal {
-            width: 80%;
-        }
-
-        .menu-form__meal-select {
-            opacity: 1;
-            width: 15%;
-            visibility: visible;
-        }
-
-        .menu-form__checkbox {
-            animation: rotate360 0.5s linear;
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
     @include breakpoint($tablet-breakpoint) {
         &__fieldset-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            max-width: 100%;
             gap: 3%;
         }
     }

@@ -1,0 +1,116 @@
+.menu-form {
+    &__meal-label {
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: lightgray;
+        background-color: rgb(255,255,255);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 70px;
+        margin: 0 0 15px 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    &__meal {
+        margin: 12px 0 12px 0;
+        width: 95%;
+        max-width: 95%;
+        margin-left: 3.5%;
+        transition: 0.5s width;
+    }
+
+    &__meal-name {
+        margin: 0;
+        height: 1.25rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        max-width: 100%;
+        font-size: nth($font-size , 4);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__meal-description {
+        margin: 7px 0 0 0;
+        height: 19px;
+        @include construction-line($block);
+        width: 95%;
+        max-width: 92%;
+        display: grid;
+        grid-template-columns: 1fr 20%;
+        grid-template-rows: 1fr;
+
+        p {
+            margin: 0;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        p:nth-child(1) {
+            height: 19px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow-wrap: break-word;
+            
+            text-wrap: nowrap;
+            @include construction-line($element);
+
+            
+        }
+
+        p:nth-child(2) {
+            font-weight: nth($font-weight, 9);
+            @include construction-line($element);
+            text-wrap: nowrap;
+        }
+    }
+
+    &__meal-select {
+        @include flex-cntr(row);
+        height: 100%;
+        width: 0%;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgb(131,232,210);
+        transition: 0.5s width, 0.5s opacity, 0.2s visibility;
+    }
+
+    &__checkbox {
+        color: white;
+        font-size: 21px;
+        transform-origin: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s opacity, 0.2s visibility;
+    }
+
+    &__checkbox-hidden {
+        display: none;
+    }
+
+    &__meal-label:hover {
+
+        .menu-form__meal {
+            width: 80%;
+        }
+
+        .menu-form__meal-select {
+            opacity: 1;
+            width: 15%;
+            visibility: visible;
+        }
+
+        .menu-form__checkbox {
+            animation: rotate360 0.5s linear;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
