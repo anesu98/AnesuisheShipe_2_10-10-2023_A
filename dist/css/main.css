@@ -22,6 +22,70 @@ body {
     opacity: 1;
   }
 }
+.loader {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  animation: show 5s forwards;
+}
+
+.loader--hidden {
+  animation: hide 3s forwards;
+  animation-delay: 1.5s;
+}
+
+.loader--vis {
+  animation: dissapear 1s forwards;
+  animation-delay: 4s;
+}
+
+.loader::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 5px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dissapear {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
 .button {
   padding: 1.063rem 0 1.063rem 0;
   background-color: rgb(163, 45, 222);
@@ -172,43 +236,43 @@ body {
 }
 .menu-form__meal-label:nth-child(1) {
   animation: 1s fade-in forwards;
-  animation-delay: 0s;
+  animation-delay: 3s;
 }
 .menu-form__meal-label:nth-child(2) {
   animation: 1s fade-in forwards;
-  animation-delay: 0.3s;
+  animation-delay: 3.3s;
 }
 .menu-form__meal-label:nth-child(3) {
   animation: 1s fade-in forwards;
-  animation-delay: 0.6s;
+  animation-delay: 3.6s;
 }
 .menu-form__meal-label:nth-child(4) {
   animation: 1s fade-in forwards;
-  animation-delay: 0.9s;
+  animation-delay: 3.9s;
 }
 .menu-form__meal-label:nth-child(5) {
   animation: 1s fade-in forwards;
-  animation-delay: 1.2s;
+  animation-delay: 4.2s;
 }
 .menu-form__meal-label:nth-child(6) {
   animation: 1s fade-in forwards;
-  animation-delay: 1.5s;
+  animation-delay: 4.5s;
 }
 .menu-form__meal-label:nth-child(7) {
   animation: 1s fade-in forwards;
-  animation-delay: 1.8s;
+  animation-delay: 4.8s;
 }
 .menu-form__meal-label:nth-child(8) {
   animation: 1s fade-in forwards;
-  animation-delay: 2.1s;
+  animation-delay: 4.1s;
 }
 .menu-form__meal-label:nth-child(9) {
   animation: 1s fade-in forwards;
-  animation-delay: 2.4s;
+  animation-delay: 4.4s;
 }
 .menu-form__meal-label:nth-child(10) {
   animation: 1s fade-in forwards;
-  animation-delay: 2.7s;
+  animation-delay: 4.7s;
 }
 .menu-form__meal {
   margin: 12px 0 12px 0;
@@ -224,9 +288,7 @@ body {
   max-width: 300px;
   font-size: 1.25rem;
   text-overflow: ellipsis;
-  text-wrap: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menu-form__meal-description {
@@ -239,7 +301,6 @@ body {
 }
 .menu-form__meal-description p {
   margin: 0;
-  text-wrap: nowrap;
 }
 .menu-form__meal-description p:nth-child(1) {
   height: 19px;
