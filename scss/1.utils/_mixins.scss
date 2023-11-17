@@ -36,7 +36,7 @@
 }
 
 @mixin btn-background {
-  background: linear-gradient(to bottom, $button-color-primary, $button-color-secondary);
+    background: linear-gradient(to bottom, $button-color-primary, $button-color-secondary);
 }
 
 @mixin breakpoint($width) {
@@ -55,30 +55,10 @@
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes loading {
-  from {transform: rotate(0turn)} 
-  to {transform: rotate(1turn)}
-}
-
-@keyframes show {
-  from { opacity: 0 }
-  to { opacity: 1 }
-}
-
-@keyframes hide {
-  from{opacity: 1}
-  to {opacity: 0}
-}
-
-@keyframes display-none {
-  from{display: block}
-  to{display: none}
-}

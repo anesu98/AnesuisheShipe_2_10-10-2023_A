@@ -5,37 +5,12 @@
     width: 100%;
     height: auto;
     margin: 0;
-    @include construction-line($element);
    }
-
-   &__fieldset {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        border-style: none;
-        opacity: 0;
-        @include construction-line($element);
-
-        &:nth-child(1) {
-            animation: 2s fade-in forwards;
-        }
-
-        &:nth-child(2) {
-            animation: 2s fade-in forwards;
-        }
-
-        &:nth-child(3) {
-            animation: 2s fade-in forwards;
-        }
-    }
 
     &__fieldset-title {
         font-weight: nth($font-weight, 1);
         font-size: nth($font-size, 4);
         margin-bottom: 1.5rem;
-        width: 100%;
-        @include construction-line($element);
 
         span {
             &:nth-child(1) {
@@ -50,9 +25,45 @@
         }
     }
 
-    
+    &__fieldset {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        border-style: none;
+        opacity: 0;
+
+        &:nth-child(1) {
+            animation: 2s fade-in forwards;
+        }
+
+        &:nth-child(2) {
+            animation: 2s fade-in forwards;
+        }
+
+        &:nth-child(3) {
+            animation: 2s fade-in forwards;
+        }
+    }
 
     &__meal-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: lightgray;
+        background-color: rgb(255,255,255);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+        height: 70px;
+        margin: 0 0 15px 0;
+        padding: 0;
+        opacity: 0;
 
         &:nth-child(1) {
             animation: 1s fade-in forwards;
@@ -105,7 +116,76 @@
         }
     }
 
-    
+    &__meal {
+        margin: 12px 0 12px 0;
+        width: 95%;
+        margin-left: 3.5%;
+        transition: 0.5s width;
+    }
+
+    &__meal-name {
+        margin: 0;
+        height: fit-content;
+        width: 95%;
+        max-width: 300px;
+        font-size: nth($font-size , 4);
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__meal-description {
+        margin: 7px 0 0 0;
+        height: 19px;
+        width: 95%;
+        max-width: 95%;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin: 0;
+            text-wrap: nowrap;
+        }
+
+        p:nth-child(1) {
+            height: 19px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 75%;
+            max-width: 200px;
+        }
+
+        p:nth-child(2) {
+            font-weight: nth($font-weight, 9);
+            width: 10%;
+        }
+    }
+
+    &__meal-select {
+        @include flex-cntr(row);
+        height: 100%;
+        width: 0%;
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgb(131,232,210);
+        transition: 0.5s width, 0.5s opacity, 0.2s visibility;
+    }
+
+    &__checkbox {
+        color: white;
+        font-size: 21px;
+        transform-origin: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s opacity, 0.2s visibility;
+    }
+
+    &__checkbox-hidden {
+        display: none;
+    }
 
     &__order-btn {
         @include flex-cntr(row);
@@ -124,12 +204,42 @@
         }
     }
 
+    &__meal-label:hover {
+
+        .menu-form__meal {
+            width: 80%;
+        }
+
+        .menu-form__meal-select {
+            opacity: 1;
+            width: 15%;
+            visibility: visible;
+        }
+
+        .menu-form__checkbox {
+            animation: rotate360 0.5s linear;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
     @include breakpoint($tablet-breakpoint) {
         &__fieldset-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
             gap: 3%;
+        }
+
+        &__meal-name {
+            max-width: 225px;
+        }
+    }
+
+    @include breakpoint($desktop-breakpoint) {
+        &__meal-name {
+            max-width: 300px;
         }
     }
 }

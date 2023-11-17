@@ -4,7 +4,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  width: 100vw;
 }
 
 @keyframes rotate360 {
@@ -21,38 +20,6 @@ body {
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes loading {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
-}
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes hide {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes display-none {
-  from {
-    display: block;
-  }
-  to {
-    display: none;
   }
 }
 .button {
@@ -145,43 +112,6 @@ body {
   transition: color 0.3s;
 }
 
-.menu-form__meal-select {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 0%;
-  opacity: 0;
-  visibility: hidden;
-  background-color: rgb(131, 232, 210);
-  transition: 0.5s width, 0.5s opacity, 0.2s visibility;
-}
-.menu-form__checkbox {
-  color: white;
-  font-size: 21px;
-  transform-origin: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s opacity, 0.2s visibility;
-}
-.menu-form__checkbox-hidden {
-  display: none;
-}
-.menu-form__meal-label:hover .menu-form__meal {
-  width: 80%;
-}
-.menu-form__meal-label:hover .menu-form__meal-select {
-  opacity: 1;
-  width: 15%;
-  visibility: visible;
-}
-.menu-form__meal-label:hover .menu-form__checkbox {
-  animation: rotate360 0.5s linear;
-  opacity: 1;
-  visibility: visible;
-}
-
 .menu-form {
   width: 89.6%;
 }
@@ -189,9 +119,20 @@ body {
   width: 100%;
   height: auto;
   margin: 0;
-  border-color: red;
+}
+.menu-form__fieldset-title {
+  font-weight: 100;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.menu-form__fieldset-title span:nth-child(1) {
+  padding-bottom: 0.5%;
+  border-bottom: 3px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   border-style: solid;
-  border-width: 1px;
+  border-color: rgb(140, 233, 212);
 }
 .menu-form__fieldset {
   width: 100%;
@@ -200,9 +141,6 @@ body {
   padding: 0;
   border-style: none;
   opacity: 0;
-  border-color: red;
-  border-style: solid;
-  border-width: 1px;
 }
 .menu-form__fieldset:nth-child(1) {
   animation: 2s fade-in forwards;
@@ -213,23 +151,24 @@ body {
 .menu-form__fieldset:nth-child(3) {
   animation: 2s fade-in forwards;
 }
-.menu-form__fieldset-title {
-  font-weight: 100;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  border-color: red;
+.menu-form__meal-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
   border-style: solid;
   border-width: 1px;
-}
-.menu-form__fieldset-title span:nth-child(1) {
-  padding-bottom: 0.5%;
-  border-bottom: 3px;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  border-style: solid;
-  border-color: rgb(140, 233, 212);
+  border-color: lightgray;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.33);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: 70px;
+  margin: 0 0 15px 0;
+  padding: 0;
+  opacity: 0;
 }
 .menu-form__meal-label:nth-child(1) {
   animation: 1s fade-in forwards;
@@ -271,6 +210,72 @@ body {
   animation: 1s fade-in forwards;
   animation-delay: 2.7s;
 }
+.menu-form__meal {
+  margin: 12px 0 12px 0;
+  width: 95%;
+  margin-left: 3.5%;
+  transition: 0.5s width;
+}
+.menu-form__meal-name {
+  margin: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 95%;
+  max-width: 300px;
+  font-size: 1.25rem;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-form__meal-description {
+  margin: 7px 0 0 0;
+  height: 19px;
+  width: 95%;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-form__meal-description p {
+  margin: 0;
+  text-wrap: nowrap;
+}
+.menu-form__meal-description p:nth-child(1) {
+  height: 19px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 75%;
+  max-width: 200px;
+}
+.menu-form__meal-description p:nth-child(2) {
+  font-weight: 900;
+  width: 10%;
+}
+.menu-form__meal-select {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 0%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgb(131, 232, 210);
+  transition: 0.5s width, 0.5s opacity, 0.2s visibility;
+}
+.menu-form__checkbox {
+  color: white;
+  font-size: 21px;
+  transform-origin: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s opacity, 0.2s visibility;
+}
+.menu-form__checkbox-hidden {
+  display: none;
+}
 .menu-form__order-btn {
   display: flex;
   flex-direction: row;
@@ -288,12 +293,34 @@ body {
 .menu-form__order-btn .button:hover {
   cursor: pointer;
 }
+.menu-form__meal-label:hover .menu-form__meal {
+  width: 80%;
+}
+.menu-form__meal-label:hover .menu-form__meal-select {
+  opacity: 1;
+  width: 15%;
+  visibility: visible;
+}
+.menu-form__meal-label:hover .menu-form__checkbox {
+  animation: rotate360 0.5s linear;
+  opacity: 1;
+  visibility: visible;
+}
 @media screen and (min-width: 768px) {
   .menu-form__fieldset-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     gap: 3%;
+  }
+  .menu-form__meal-name {
+    max-width: 225px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .menu-form__meal-name {
+    max-width: 300px;
   }
 }
 
@@ -439,7 +466,7 @@ body {
 }
 @media screen and (min-width: 1000px) {
   .restaurants {
-    flex-direction: column;
+    flex-direction: row-reverse;
     width: 100%;
   }
   .restaurants__heading {
@@ -447,7 +474,7 @@ body {
     text-align: center;
   }
   .restaurants__cards {
-    width: 83%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
