@@ -452,6 +452,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: 5s fade-in forwards;
 }
 .anchor__text-container {
   margin: 0;
@@ -491,6 +492,7 @@ body {
   padding-bottom: 63px;
   background-color: rgb(246, 246, 246);
   position: relative;
+  animation: 8s fade-in forwards;
 }
 .restaurants__heading {
   width: 89.6%;
@@ -564,6 +566,7 @@ body {
   padding-top: 3.25rem;
   padding-bottom: 4rem;
   background-color: rgb(255, 255, 255);
+  animation: 7s fade-in forwards;
 }
 .instructions__heading {
   width: 89.6%;

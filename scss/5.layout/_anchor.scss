@@ -5,6 +5,7 @@
     padding: 2.75rem 0 3.75rem 0;
     background: rgb(246,246,246);
     @include flex-cntr($column);
+    animation: 5s fade-in forwards;
 
     &__text-container {
         margin: 0;
